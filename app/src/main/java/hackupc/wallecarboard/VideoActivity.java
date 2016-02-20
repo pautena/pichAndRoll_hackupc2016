@@ -1,5 +1,6 @@
 package hackupc.wallecarboard;
 
+import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -11,13 +12,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.VideoView;
+
+import io.vov.vitamio.widget.MediaController;
+import io.vov.vitamio.widget.VideoView;
 
 public class VideoActivity extends AppCompatActivity implements SensorEventListener{
     private final static String TAG="VideoActivity";
-    private static final String VIDEO_URL = "http://10.192.114.44:8000/video3gp.3gp";
+    private static final String VIDEO_URL = "rtsp://10.4.180.187:8554/";
 
     private VideoView videoViewLeft;
     private VideoView videoViewRight;
@@ -39,6 +41,7 @@ public class VideoActivity extends AppCompatActivity implements SensorEventListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
         Log.d(TAG, "onCreate");
+
         hideSystemUI();
         configureSensors();
         configureVideo();
@@ -47,8 +50,7 @@ public class VideoActivity extends AppCompatActivity implements SensorEventListe
     }
 
     @Override
-    protected void onResume()
-    {
+    protected void onResume() {
         super.onResume();
 
         sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
@@ -75,9 +77,27 @@ public class VideoActivity extends AppCompatActivity implements SensorEventListe
             Uri video = Uri.parse(VIDEO_URL);
             videoViewLeft.setMediaController(mediaController);
             videoViewLeft.setVideoURI(video);
+            videoViewLeft.setBufferSize(2048);
+            videoViewLeft.setVideoQuality(16);
             videoViewLeft.requestFocus();
 
-            videoViewLeft.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            videoViewLeft.setOnPreparedListener(new io.vov.vitamio.MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(io.vov.vitamio.MediaPlayer mp) {
+                    Log.d(TAG, "video left prepared");
+                    playVideoRight();
+                }
+            });
+
+            videoViewLeft.setOnErrorListener(new io.vov.vitamio.MediaPlayer.OnErrorListener() {
+                @Override
+                public boolean onError(io.vov.vitamio.MediaPlayer mp, int what, int extra) {
+                    Log.d(TAG, "video error: " + videoViewLeft.getId() + ", what: " + what + ", extra: " + extra);
+                    return false;
+                }
+            });
+
+            /*videoViewLeft.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 public void onPrepared(MediaPlayer mp) {
                     Log.d(TAG,"video left prepared");
                     playVideoRight();
@@ -91,7 +111,9 @@ public class VideoActivity extends AppCompatActivity implements SensorEventListe
                     return false;
                 }
 
-            });
+            });*/
+
+
 
         }catch(Exception e){
             Log.d(TAG,"Error play video. message: "+e.getMessage());
@@ -109,9 +131,28 @@ public class VideoActivity extends AppCompatActivity implements SensorEventListe
             Uri video = Uri.parse(VIDEO_URL);
             videoViewRight.setMediaController(mediaController);
             videoViewRight.setVideoURI(video);
+            videoViewRight.setBufferSize(2048);
+            videoViewRight.setVideoQuality(16);
             videoViewRight.requestFocus();
 
-            videoViewRight.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            videoViewRight.setOnPreparedListener(new io.vov.vitamio.MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(io.vov.vitamio.MediaPlayer mp) {
+                    Log.d(TAG, "video right prepared");
+                    videoViewLeft.start();
+                    videoViewRight.start();
+                }
+            });
+
+            videoViewRight.setOnErrorListener(new io.vov.vitamio.MediaPlayer.OnErrorListener() {
+                @Override
+                public boolean onError(io.vov.vitamio.MediaPlayer mp, int what, int extra) {
+                    Log.d(TAG,"video error: "+videoViewRight.getId()+", what: "+what+", extra: "+extra);
+                    return false;
+                }
+            });
+
+            /*videoViewRight.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 public void onPrepared(MediaPlayer mp) {
                     Log.d(TAG,"video right prepared");
                     videoViewLeft.start();
@@ -126,7 +167,7 @@ public class VideoActivity extends AppCompatActivity implements SensorEventListe
                     return false;
                 }
 
-            });
+            });*/
 
         }catch(Exception e){
             Log.d(TAG,"Error play video. message: "+e.getMessage());
