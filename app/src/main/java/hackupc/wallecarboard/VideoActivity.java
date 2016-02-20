@@ -4,6 +4,7 @@ import android.graphics.PixelFormat;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.MediaController;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 public class VideoActivity extends AppCompatActivity implements SensorEventListener{
@@ -19,6 +21,18 @@ public class VideoActivity extends AppCompatActivity implements SensorEventListe
 
     private VideoView videoViewLeft;
     private VideoView videoViewRight;
+    private SensorManager sensorManager;
+
+
+    float RotMat[]=null;
+    float I[]=null;
+    float sensorAcc[]=new float[3];
+    float sensorMag[]=new float[3];
+    float[] values = new float[3];
+
+    float pitch;
+    float roll;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +46,18 @@ public class VideoActivity extends AppCompatActivity implements SensorEventListe
         playVideoLeft();
     }
 
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+
+        sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD), SensorManager.SENSOR_DELAY_NORMAL);
+    }
+
     private void configureSensors(){
-        //TODO: Configure sensors
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+
     }
 
     private void configureVideo(){
@@ -125,11 +149,48 @@ public class VideoActivity extends AppCompatActivity implements SensorEventListe
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        //TODO: Work with sensors
+        switch (event.sensor.getType())
+        {
+            case Sensor.TYPE_MAGNETIC_FIELD:
+                sensorMag = event.values.clone();
+                break;
+            case Sensor.TYPE_ACCELEROMETER:
+                sensorAcc = event.values.clone();
+                break;
+        }
+
+        if (sensorMag != null && sensorAcc != null) {
+            RotMat = new float[9];
+            I = new float[9];
+            SensorManager.getRotationMatrix(RotMat, I, sensorAcc, sensorMag);
+
+            /*Correction for landscape */
+            float[] outR = new float[9];
+            SensorManager.remapCoordinateSystem(RotMat, SensorManager.AXIS_X, SensorManager.AXIS_Z, outR);
+
+
+            /*  getOrientation the array values is filled with the result:
+                values[0]: azimuth, rotation around the -Z axis, i.e. the opposite direction of Z axis.
+                values[1]: pitch, rotation around the -X axis, i.e the opposite direction of X axis.
+                values[2]: roll, rotation around the Y axis. */
+            SensorManager.getOrientation(outR, values);
+
+            /* 57,295 = 1  rad */
+
+            pitch = values[1] * 57.2957795f;
+            roll = values[2] * 57.2957795f;
+
+            sensorMag = null; //ensure that is null to next iteration
+            sensorAcc = null;
+
+            TextView getX = (TextView)findViewById(R.id.getX);
+            TextView getY = (TextView)findViewById(R.id.getY);
+            getX.setText("PITCH:"+String.valueOf(pitch));
+            getY.setText("ROLL:"+String.valueOf(roll));
+        }
     }
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        //TODO:Work with sensors
     }
 }
