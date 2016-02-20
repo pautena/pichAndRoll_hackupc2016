@@ -11,9 +11,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.VideoView;
+
+import io.vov.vitamio.widget.VideoView;
 
 public class VideoActivity extends AppCompatActivity implements SensorEventListener{
     private final static String TAG="VideoActivity";
@@ -72,7 +72,7 @@ public class VideoActivity extends AppCompatActivity implements SensorEventListe
             videoViewLeft.setVideoURI(video);
             videoViewLeft.requestFocus();
 
-            videoViewLeft.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            /*videoViewLeft.setOnPreparedListener(new io.vov.vitamio.widget.MediaPlayer.OnPreparedListener() {
                 public void onPrepared(MediaPlayer mp) {
                     Log.d(TAG,"video left prepared");
                     playVideoRight();
@@ -86,6 +86,22 @@ public class VideoActivity extends AppCompatActivity implements SensorEventListe
                     return false;
                 }
 
+            });*/
+
+            videoViewLeft.setOnPreparedListener(new io.vov.vitamio.MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(io.vov.vitamio.MediaPlayer mp) {
+                    Log.d(TAG,"video left prepared");
+                    playVideoRight();
+                }
+            });
+
+            videoViewLeft.setOnErrorListener(new io.vov.vitamio.MediaPlayer.OnErrorListener() {
+                @Override
+                public boolean onError(io.vov.vitamio.MediaPlayer mp, int what, int extra) {
+                    Log.d(TAG,"video error: "+videoViewLeft.getId()+", what: "+what+", extra: "+extra);
+                    return false;
+                }
             });
 
         }catch(Exception e){

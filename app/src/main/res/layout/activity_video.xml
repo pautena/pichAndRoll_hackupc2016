@@ -12,13 +12,13 @@
         android:orientation="horizontal"
         android:weightSum="1">
 
-        <VideoView
+        <io.vov.vitamio.widget.VideoView
             android:id="@+id/video_view_left"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:layout_gravity="center"/>
-        <VideoView
+        <io.vov.vitamio.widget.VideoView
             android:id="@+id/video_view_right"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
