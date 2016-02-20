@@ -14,73 +14,14 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="VideoActivity" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed226c8e-e0b5-4158-9a02-107c3c5328b8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/raw/libarm.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/libs/armeabi/libvinit.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/libs/armeabi-v7a/libvinit.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/libs/mips/libvinit.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/libs/x86/libvinit.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/drawable-xhdpi/mediacontroller_pause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/drawable-xhdpi/mediacontroller_play.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/drawable-xhdpi/scrubber_control_disabled_holo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/drawable-xhdpi/scrubber_control_focused_holo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/drawable-xhdpi/scrubber_control_normal_holo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/drawable-xhdpi/scrubber_control_pressed_holo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/drawable-xhdpi/scrubber_primary_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/drawable-xhdpi/scrubber_secondary_holo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/drawable-xhdpi/scrubber_track_holo_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/utils/Base64.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/utils/CPU.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/widget/CenterLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/utils/ContextUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/utils/Crypto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/utils/Device.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/EGL.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/utils/FileUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/utils/IOUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/activity/InitActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/LibsChecker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/utils/Log.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/widget/MediaController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/MediaFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/MediaFormat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/MediaMetadataRetriever.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/MediaPlayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/MediaScanner.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/MediaScannerClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/provider/MediaStore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/Metadata.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/provider/MiniThumbFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/widget/OutlineTextView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/utils/ScreenResolution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/utils/StringUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/ThumbnailUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/VIntent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/widget/VideoView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/Vitamio.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/VitamioLicense.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/values/colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/layout/mediacontroller.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/drawable/mediacontroller_button.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/proguard-project.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/project.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/drawable/scrubber_control_selector_holo.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/drawable/scrubber_progress_horizontal_holo_dark.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vitamio/res/values/styles.xml" />
+    <list default="true" id="ed226c8e-e0b5-4158-9a02-107c3c5328b8" name="Default" comment="treta">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/utils/ScreenResolution.java" afterPath="$PROJECT_DIR$/vitamio/src/io/vov/vitamio/utils/ScreenResolution.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/hackupc/wallecarboard/VideoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/hackupc/wallecarboard/VideoActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_video.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_video.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WallECarboard.iws" />
@@ -112,18 +53,18 @@
       <file leaf-file-name="VideoActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/hackupc/wallecarboard/VideoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7112069">
-              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.026041666">
+              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2697#2973#0" expanded="true" />
-                <element signature="e#2972#2973#0" expanded="true" />
-                <element signature="e#3022#3372#0" expanded="true" />
-                <element signature="e#3371#3372#0" expanded="true" />
-                <element signature="e#4805#5131#0" expanded="true" />
-                <element signature="e#5130#5131#0" expanded="true" />
-                <element signature="e#5181#5521#0" expanded="true" />
-                <element signature="e#5520#5521#0" expanded="true" />
+                <element signature="e#2676#2922#0" expanded="true" />
+                <element signature="e#2921#2922#0" expanded="true" />
+                <element signature="e#2971#3291#0" expanded="true" />
+                <element signature="e#3290#3291#0" expanded="true" />
+                <element signature="e#4027#4323#0" expanded="true" />
+                <element signature="e#4322#4323#0" expanded="true" />
+                <element signature="e#4373#4683#0" expanded="true" />
+                <element signature="e#4682#4683#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,14 +82,14 @@
       </file>
       <file leaf-file-name="activity_video.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_video.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.344828">
-              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
           <provider editor-type-id="android-designer">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.7586207">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -2490,6 +2431,10 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2510,10 +2455,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2535,117 +2476,6 @@
     <key name="android.template.parentActivityClass">
       <recent name="" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/hackupc/wallecarboard/VideoActivity.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/res/layout/activity_video.xml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -2814,6 +2644,13 @@
       <option name="number" value="Default" />
       <updated>1455924014343</updated>
     </task>
+    <task id="LOCAL-00001" summary="Afegida vitaminio">
+      <created>1455979626477</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1455979626477</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2827,7 +2664,7 @@
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.56953645" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.56953645" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -2842,7 +2679,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294702" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2856,6 +2693,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Afegida vitaminio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Afegida vitaminio" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -2867,14 +2708,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2697#2973#0" expanded="true" />
-            <element signature="e#2972#2973#0" expanded="true" />
-            <element signature="e#3022#3372#0" expanded="true" />
-            <element signature="e#3371#3372#0" expanded="true" />
-            <element signature="e#4805#5131#0" expanded="true" />
-            <element signature="e#5130#5131#0" expanded="true" />
-            <element signature="e#5181#5521#0" expanded="true" />
-            <element signature="e#5520#5521#0" expanded="true" />
+            <element signature="e#2676#2922#0" expanded="true" />
+            <element signature="e#2921#2922#0" expanded="true" />
+            <element signature="e#2971#3291#0" expanded="true" />
+            <element signature="e#3290#3291#0" expanded="true" />
+            <element signature="e#4027#4323#0" expanded="true" />
+            <element signature="e#4322#4323#0" expanded="true" />
+            <element signature="e#4373#4683#0" expanded="true" />
+            <element signature="e#4682#4683#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2888,21 +2729,57 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_video.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hackupc/wallecarboard/VideoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2676#2922#0" expanded="true" />
+            <element signature="e#2921#2922#0" expanded="true" />
+            <element signature="e#2971#3291#0" expanded="true" />
+            <element signature="e#3290#3291#0" expanded="true" />
+            <element signature="e#4027#4323#0" expanded="true" />
+            <element signature="e#4322#4323#0" expanded="true" />
+            <element signature="e#4373#4683#0" expanded="true" />
+            <element signature="e#4682#4683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_video.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.333333">
           <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2930,30 +2807,30 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_video.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.344828">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.7586207">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/hackupc/wallecarboard/VideoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7112069">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.026041666">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2697#2973#0" expanded="true" />
-            <element signature="e#2972#2973#0" expanded="true" />
-            <element signature="e#3022#3372#0" expanded="true" />
-            <element signature="e#3371#3372#0" expanded="true" />
-            <element signature="e#4805#5131#0" expanded="true" />
-            <element signature="e#5130#5131#0" expanded="true" />
-            <element signature="e#5181#5521#0" expanded="true" />
-            <element signature="e#5520#5521#0" expanded="true" />
+            <element signature="e#2676#2922#0" expanded="true" />
+            <element signature="e#2921#2922#0" expanded="true" />
+            <element signature="e#2971#3291#0" expanded="true" />
+            <element signature="e#3290#3291#0" expanded="true" />
+            <element signature="e#4027#4323#0" expanded="true" />
+            <element signature="e#4322#4323#0" expanded="true" />
+            <element signature="e#4373#4683#0" expanded="true" />
+            <element signature="e#4682#4683#0" expanded="true" />
           </folding>
         </state>
       </provider>
