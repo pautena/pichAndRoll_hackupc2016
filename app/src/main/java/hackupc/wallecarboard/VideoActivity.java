@@ -15,7 +15,8 @@ import android.widget.VideoView;
 
 public class VideoActivity extends AppCompatActivity implements SensorEventListener{
     private final static String TAG="VideoActivity";
-    private static final String VIDEO_URL = "http://10.192.114.44:8000/video3gp.3gp";
+    //private static final String VIDEO_URL = "http://10.192.114.44:8000/video3gp.3gp";
+    private static final String VIDEO_URL = "http://192.168.43.29:8000/video3gp.3gp";
 
     private VideoView videoViewLeft;
     private VideoView videoViewRight;
