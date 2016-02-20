@@ -15,12 +15,14 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import java.io.UnsupportedEncodingException;
+
 
 public class VideoActivity extends AppCompatActivity implements SensorEventListener{
     private final static String TAG="VideoActivity";
     //private static final String VIDEO_URL = "http://10.192.114.44:8000/video3gp.3gp";
-    private static final String VIDEO_URL = "http://192.168.43.29:8000/video3gp.3gp";
-
+    //private static final String VIDEO_URL = "http://192.168.43.29:8000/video3gp.3gp";
+    private static final String VIDEO_URL = "http://192.168.43.107:8090/";
     private VideoView videoViewLeft;
     private VideoView videoViewRight;
 
@@ -62,73 +64,69 @@ public class VideoActivity extends AppCompatActivity implements SensorEventListe
     }
 
     private void playVideoLeft(){
-        try{
-            Log.d(TAG, "playVideoLeft: " + videoViewLeft.getId());
-            getWindow().setFormat(PixelFormat.TRANSLUCENT);
-            MediaController mediaController = new MediaController(this);
-            mediaController.setAnchorView(videoViewLeft);
+        Log.d(TAG, "playVideoLeft: " + videoViewLeft.getId());
+        getWindow().setFormat(PixelFormat.TRANSLUCENT);
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoViewLeft);
 
-            Uri video = Uri.parse(VIDEO_URL);
-            videoViewLeft.setMediaController(mediaController);
-            videoViewLeft.setVideoURI(video);
-            videoViewLeft.requestFocus();
+        Uri video = Uri.parse(VIDEO_URL);
+        videoViewLeft.setMediaController(mediaController);
+        videoViewLeft.setVideoURI(video);
+        videoViewLeft.requestFocus();
 
 
-            videoViewLeft.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    Log.d(TAG,"video left prepared");
-                    playVideoRight();
+        videoViewLeft.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                Log.d(TAG, "video left prepared");
+                playVideoRight();
+            }
+        });
+
+        videoViewLeft.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+            @Override
+            public boolean onError(MediaPlayer mp, int what, int extra) {
+                Log.d(TAG,"video error: "+videoViewLeft.getId()+", what: "+what+", extra: "+extra);
+                if(what==100) {
+                    videoViewLeft.stopPlayback();
+                    playVideoLeft();
                 }
-            });
-
-            videoViewLeft.setOnErrorListener(new MediaPlayer.OnErrorListener() {
-                @Override
-                public boolean onError(MediaPlayer mp, int what, int extra) {
-                    Log.d(TAG,"video error: "+videoViewLeft.getId()+", what: "+what+", extra: "+extra);
-                    return false;
-                }
-            });
-
-        }catch(Exception e){
-            Log.d(TAG,"Error play video. message: "+e.getMessage());
-            finish();
-        }
+                return false;
+            }
+        });
     }
 
     private void playVideoRight(){
-        try{
-            Log.d(TAG, "playVideoRight: " + videoViewRight.getId());
-            getWindow().setFormat(PixelFormat.TRANSLUCENT);
-            MediaController mediaController = new MediaController(this);
-            mediaController.setAnchorView(videoViewRight);
+        Log.d(TAG, "playVideoRight: " + videoViewRight.getId());
+        getWindow().setFormat(PixelFormat.TRANSLUCENT);
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoViewRight);
 
-            Uri video = Uri.parse(VIDEO_URL);
-            videoViewRight.setMediaController(mediaController);
-            videoViewRight.setVideoURI(video);
-            videoViewRight.requestFocus();
+        Uri video = Uri.parse(VIDEO_URL);
+        videoViewRight.setMediaController(mediaController);
+        videoViewRight.setVideoURI(video);
+        videoViewRight.requestFocus();
 
-            videoViewRight.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                public void onPrepared(MediaPlayer mp) {
-                    Log.d(TAG,"video right prepared");
-                    videoViewLeft.start();
-                    videoViewRight.start();
+        videoViewRight.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            public void onPrepared(MediaPlayer mp) {
+                Log.d(TAG,"video right prepared");
+                videoViewLeft.start();
+                videoViewRight.start();
+            }
+        });
+        videoViewRight.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+
+            @Override
+            public boolean onError(MediaPlayer mp, int what, int extra) {
+                Log.d(TAG,"video error: "+videoViewRight.getId()+", what: "+what+", extra: "+extra);
+                if(what==100) {
+                    videoViewRight.stopPlayback();
+                    playVideoRight();
                 }
-            });
-            videoViewRight.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+                return false;
+            }
 
-                @Override
-                public boolean onError(MediaPlayer mp, int what, int extra) {
-                    Log.d(TAG,"video error: "+videoViewRight.getId()+", what: "+what+", extra: "+extra);
-                    return false;
-                }
-
-            });
-
-        }catch(Exception e){
-            Log.d(TAG,"Error play video. message: "+e.getMessage());
-            finish();
-        }
+        });
     }
 
     private void hideSystemUI() {
